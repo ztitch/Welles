@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/putin.png</SourceFile>
+  <SourceFile>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/putin.png</SourceFile>
   <SourceTime>2019-02-25T09:44:20.5087816+01:00</SourceTime>
-  <DestFile>C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Content/Sprites/putin.xnb</DestFile>
-  <DestTime>2019-02-25T09:49:01.3680644+01:00</DestTime>
+  <DestFile>C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Content/Sprites/putin.xnb</DestFile>
+  <DestTime>2019-03-12T15:15:26.0790007+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

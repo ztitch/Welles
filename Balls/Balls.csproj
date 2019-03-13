@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Ball.cs" />
     <Compile Include="Classes\SpriteObject.cs" />
+    <Compile Include="Direction.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

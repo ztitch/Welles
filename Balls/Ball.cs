@@ -10,9 +10,10 @@ namespace Balls
 {
     class Ball
     {
-        private const float MAX_SPEED = 3f;
-        private const bool LOCKED_MAX_SPEED = true;
-        private const bool GRAVITY_ENABLED = false; // TODO
+        private const float MAX_SPEED = 5f;
+        private const bool LOCKED_MAX_SPEED = false;
+
+        private const float GRAVITATIONAL_CONST = 0.0981f;
 
         private Texture2D texture; // Ball texture, duhh
         public Vector2 position; // Ball position
@@ -24,14 +25,14 @@ namespace Balls
 
         private Color color;
 
-        public Ball(Texture2D texture, Vector2 position, Vector2 velocity, float radius, float mass, Color color)
+        public Ball(Texture2D texture, Vector2 position, Vector2 velocity, float mass, Color color)
         {
             this.texture = texture;
             this.position = position;
             this.velocity = velocity;
             this.mass = mass;
             this.color = color;
-            this.radius = texture.Width;
+            this.radius = texture.Width / 2;
             this.center = new Vector2(position.X + texture.Width / 2, position.Y + texture.Width / 2);
         }
 
@@ -41,7 +42,7 @@ namespace Balls
             this.center += this.velocity;
             this.position += this.velocity;
 
-            if(LOCKED_MAX_SPEED)
+            if (LOCKED_MAX_SPEED)
             {
                 if (velocity.X > MAX_SPEED)
                     velocity.X = MAX_SPEED;
@@ -55,17 +56,40 @@ namespace Balls
             Rectangle sourceRectangle = new Rectangle(0, 0, texture.Width, texture.Height);
             Vector2 origin = new Vector2(texture.Width / 2, texture.Height / 2);
 
-            spriteBatch.Draw(texture, position, sourceRectangle, this.color, 0f, origin, 2f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture, position, sourceRectangle, this.color, 0f, origin, 1f, SpriteEffects.None, 0f);
         }
 
         #region Gravity
-        // TO DO
+        public void ApplyGravity(Direction direction)
+        {
+            Vector2 force = new Vector2();
+            switch (direction)
+            {
+                case Direction.Down:
+                    force.Y = mass * GRAVITATIONAL_CONST;       // The normal gravity F = m * g - I divided the value by 100 because otherwise the balls would fly away in an instance
+                    break;
+                case Direction.Up:
+                    force.Y = mass * GRAVITATIONAL_CONST * -1;
+                    break;
+                case Direction.Left:
+                    force.X = mass * GRAVITATIONAL_CONST * -1;
+                    break;
+                case Direction.Right:
+                    force.X = mass * GRAVITATIONAL_CONST;
+                    break;
+                case Direction.None:
+                default:
+                    break;
+            }
+            
+            this.velocity += force;
+        }
         #endregion
 
         #region Collision
         public void CalculateCollision(Ball ball)
         {
-            if(Collides(ball))
+            if (Collides(ball))
             {
                 Collide(ball);
             }
@@ -74,7 +98,7 @@ namespace Balls
         public bool Collides(Ball ball) // Check if the balls are actually colliding
         {
             var distance = Math.Sqrt(
-                ((this.center.X - ball.center.X) * (this.center.X - ball.center.X)) + 
+                ((this.center.X - ball.center.X) * (this.center.X - ball.center.X)) +
                 ((this.center.Y - ball.center.Y) * (this.center.Y - ball.center.Y)));
 
             if (distance < this.radius + ball.radius)
@@ -112,6 +136,7 @@ namespace Balls
 
         public void Collide(Ball ball) // And finnaly calculates which direction the balls must go
         {
+            // Elastic collision https://en.wikipedia.org/wiki/Elastic_collision
             float newVelX1 = (this.velocity.X * (this.mass - ball.mass) + (2 * ball.mass * ball.velocity.X)) / (this.mass + ball.mass);
             float newVelY1 = (this.velocity.Y * (this.mass - ball.mass) + (2 * ball.mass * ball.velocity.Y)) / (this.mass + ball.mass);
             float newVelX2 = (ball.velocity.X * (ball.mass - this.mass) + (2 * this.mass * this.velocity.X)) / (this.mass + ball.mass);
@@ -120,6 +145,7 @@ namespace Balls
             this.velocity = new Vector2(newVelX1, newVelY1);
             ball.velocity = new Vector2(newVelX2, newVelY2);
 
+            // Move before next update to reduce clumping
             this.center += this.velocity;
             this.position += this.velocity;
 

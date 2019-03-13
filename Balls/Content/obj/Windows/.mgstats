@@ -1,6 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/ball.png","C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Sprites/ball.xnb","TextureProcessor","Texture2DContent",2434,10085,0,1349772
-"C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/donald.png","C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Sprites/donald.xnb","TextureProcessor","Texture2DContent",127809,934361,0,0394229
-"C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/kim.png","C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Sprites/kim.xnb","TextureProcessor","Texture2DContent",514064,2531285,0,0873314
-"C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/putin.png","C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Sprites/putin.xnb","TextureProcessor","Texture2DContent",590078,1595029,0,0639821
-"C:/Users/timre/source/repos/Balls/Balls/Content/Sprites/reee.png","C:/Users/timre/source/repos/Balls/Balls/Content/bin/Windows/Sprites/reee.xnb","TextureProcessor","Texture2DContent",6019,10085,0,0099187
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/ball.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/ball.xnb","TextureProcessor","Texture2DContent",2434,10085,0,1279755
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/donald.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/donald.xnb","TextureProcessor","Texture2DContent",127809,934361,0,043851
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/kim.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/kim.xnb","TextureProcessor","Texture2DContent",514064,2531285,0,1183573
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/putin.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/putin.xnb","TextureProcessor","Texture2DContent",590078,1595029,0,0698125
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/reee.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/reee.xnb","TextureProcessor","Texture2DContent",6019,10085,0,0119678
+"C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/smallball.png","C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Sprites/smallball.xnb","TextureProcessor","Texture2DContent",975,2585,0,0089768

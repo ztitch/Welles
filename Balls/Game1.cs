@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 
 namespace Balls
@@ -11,22 +12,26 @@ namespace Balls
     /// </summary>
     public class Game1 : Game
     {
-        public const bool GRAVITY = false;
+        private const int AMOUNT_OF_BALLS = 500;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Random rnd;
 
         List<Ball> balls;
         List<Texture2D> textures;
+        Color[] colors;
 
         Rectangle window;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+
             graphics.PreferredBackBufferWidth = 1060;  // set this value to the desired width of your window
             graphics.PreferredBackBufferHeight = 960;   // set this value to the desired height of your window
             graphics.ApplyChanges();
+
             Content.RootDirectory = "Content";
         }
 
@@ -39,8 +44,10 @@ namespace Balls
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            rnd = new Random();
             balls = new List<Ball>();
             textures = new List<Texture2D>();
+            colors = new Color[5] { Color.Blue, Color.Red, Color.Yellow, Color.LightGreen, Color.Pink };
             window = GraphicsDevice.PresentationParameters.Bounds;
 
             base.Initialize();
@@ -56,24 +63,18 @@ namespace Balls
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            textures.Add(Content.Load<Texture2D>("Sprites/ball"));
-            //textures.Add(Content.Load<Texture2D>("Sprites/donald"));
-            //textures.Add(Content.Load<Texture2D>("Sprites/kim"));
-            //textures.Add(Content.Load<Texture2D>("Sprites/putin"));
-            //textures.Add(Content.Load<Texture2D>("Sprites/reee"));
+            textures.Add(Content.Load<Texture2D>("Sprites/smallball"));
 
-            balls.Add(new Ball(textures[0], new Vector2(100, 100), new Vector2(1.5f, 1f), 20, 1, Color.Green));
-            balls.Add(new Ball(textures[0], new Vector2(200, 800), new Vector2(1.5f, -2f), 20, 2, Color.Yellow));
-            balls.Add(new Ball(textures[0], new Vector2(800, 100), new Vector2(0.5f, -1f), 20, 3, Color.Red));
-            balls.Add(new Ball(textures[0], new Vector2(300, 500), new Vector2(1.5f, -1.5f), 20, 4, Color.Pink));
-            balls.Add(new Ball(textures[0], new Vector2(100, 650), new Vector2(1.5f, 1f), 20, 1, Color.Green));
-            balls.Add(new Ball(textures[0], new Vector2(700, 800), new Vector2(1.5f, -2f), 20, 2, Color.Yellow));
-            //balls.Add(new Ball(textures[0], new Vector2(800, 500), new Vector2(0.5f, -1f), 20, 3, Color.Red));
-            //balls.Add(new Ball(textures[0], new Vector2(500, 500), new Vector2(1.5f, -1.5f), 20, 4, Color.Pink));
-            //balls.Add(new Ball(textures[0], new Vector2(750, 55), new Vector2(1.5f, 1f), 20, 1, Color.Green));
-            //balls.Add(new Ball(textures[0], new Vector2(450, 275), new Vector2(1.5f, -2f), 20, 2, Color.Yellow));
-            //balls.Add(new Ball(textures[0], new Vector2(755, 200), new Vector2(0.5f, -1f), 20, 3, Color.Red));
-            //balls.Add(new Ball(textures[0], new Vector2(520, 350), new Vector2(1.5f, -1.5f), 20, 4, Color.Pink));
+            for (int i = 0; i < AMOUNT_OF_BALLS; i++)
+            {
+                balls.Add(new Ball(
+                    textures[0],
+                    new Vector2(rnd.Next(25, window.Width), rnd.Next(25, window.Height)), 
+                    new Vector2(rnd.Next(-5, 5), rnd.Next(-5, 5)), 
+                    rnd.Next(1, 10), 
+                    colors[rnd.Next(0, colors.Length)]                    
+                ));
+            }
         }
 
         /// <summary>
@@ -101,12 +102,21 @@ namespace Balls
                 balls[i].Update(gameTime);
             }
 
+            Direction direction = CheckDirectionalButtons();
+
             for (int i = 0; i <= balls.Count - 1; i++)
             {
+                if (direction != Direction.None)
+                    balls[i].ApplyGravity(direction);
+
                 for (int j = 0; j <= balls.Count - 1; j++)
                 {
+                    if (i == j)
+                        continue;
+
                     balls[i].CalculateCollision(balls[j]);
                 }
+
                 balls[i].Collides(window);
             }
 
@@ -130,6 +140,19 @@ namespace Balls
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        private Direction CheckDirectionalButtons()
+        {
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+                return Direction.Left;
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                return Direction.Right;
+            else if (Keyboard.GetState().IsKeyDown(Keys.Up))
+                return Direction.Up;
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down))
+                return Direction.Down;
+            return Direction.None;
         }
     }
 }
