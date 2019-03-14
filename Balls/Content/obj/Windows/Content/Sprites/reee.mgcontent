@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/reee.png</SourceFile>
-  <SourceTime>2019-02-28T09:55:02.3393607+01:00</SourceTime>
-  <DestFile>C:/Users/timre/Documents/_github repos/Balls/Content/bin/Windows/Content/Sprites/reee.xnb</DestFile>
-  <DestTime>2019-03-12T15:15:26.0949587+01:00</DestTime>
+  <SourceFile>D:/School/WelLes/Welles/Balls/Content/Sprites/reee.png</SourceFile>
+  <SourceTime>2019-03-12T14:29:49.3618537+01:00</SourceTime>
+  <DestFile>D:/School/WelLes/Welles/Balls/Content/bin/Windows/Content/Sprites/reee.xnb</DestFile>
+  <DestTime>2019-03-14T21:16:46.5360277+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
+  <ImporterTime>2019-03-05T23:23:08+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
+  <ProcessorTime>2019-03-05T23:23:08+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

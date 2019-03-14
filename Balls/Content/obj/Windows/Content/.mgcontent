@@ -4,12 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/ball.png</File>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/donald.png</File>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/kim.png</File>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/putin.png</File>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/reee.png</File>
-    <File>C:/Users/timre/Documents/_github repos/Balls/Content/Sprites/smallball.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/ball.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/donald.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/kim.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/putin.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/reee.png</File>
+    <File>D:/School/WelLes/Welles/Balls/Content/Sprites/smallball.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -55,3 +55,32 @@ C:\Users\timre\Documents\_github repos\Balls\obj\x86\Debug\Balls.csproj.CoreComp
 C:\Users\timre\Documents\_github repos\Balls\obj\x86\Debug\Balls.csproj.CopyComplete
 C:\Users\timre\Documents\_github repos\Balls\obj\x86\Debug\Balls.exe
 C:\Users\timre\Documents\_github repos\Balls\obj\x86\Debug\Balls.pdb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\ball.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\donald.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\kim.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\putin.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\reee.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Content\Sprites\smallball.xnb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Balls.exe
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\Balls.pdb
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\School\WelLes\Welles\Balls\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\School\WelLes\Welles\Balls\obj\x86\Debug\Balls.csprojAssemblyReference.cache
+D:\School\WelLes\Welles\Balls\obj\x86\Debug\Balls.csproj.CoreCompileInputs.cache
+D:\School\WelLes\Welles\Balls\obj\x86\Debug\Balls.csproj.CopyComplete
+D:\School\WelLes\Welles\Balls\obj\x86\Debug\Balls.exe
+D:\School\WelLes\Welles\Balls\obj\x86\Debug\Balls.pdb

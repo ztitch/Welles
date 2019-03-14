@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balls", "Balls\Balls.csproj", "{16B548A8-D760-4AC9-A6D1-B9554380A74F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dvd", "Dvd\Dvd.csproj", "{7EE981DD-3CF6-49AC-A2B3-C74D460BAEDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{16B548A8-D760-4AC9-A6D1-B9554380A74F}.Debug|x86.Build.0 = Debug|x86
 		{16B548A8-D760-4AC9-A6D1-B9554380A74F}.Release|x86.ActiveCfg = Release|x86
 		{16B548A8-D760-4AC9-A6D1-B9554380A74F}.Release|x86.Build.0 = Release|x86
+		{7EE981DD-3CF6-49AC-A2B3-C74D460BAEDB}.Debug|x86.ActiveCfg = Debug|x86
+		{7EE981DD-3CF6-49AC-A2B3-C74D460BAEDB}.Debug|x86.Build.0 = Debug|x86
+		{7EE981DD-3CF6-49AC-A2B3-C74D460BAEDB}.Release|x86.ActiveCfg = Release|x86
+		{7EE981DD-3CF6-49AC-A2B3-C74D460BAEDB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
