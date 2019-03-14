@@ -21,3 +21,4 @@ D:\School\WelLes\Welles\Dvd\bin\Windows\x86\Debug\SharpDX.XInput.xml
 D:\School\WelLes\Welles\Dvd\obj\x86\Debug\Dvd.csproj.CopyComplete
 D:\School\WelLes\Welles\Dvd\obj\x86\Debug\Dvd.exe
 D:\School\WelLes\Welles\Dvd\obj\x86\Debug\Dvd.pdb
+D:\School\WelLes\Welles\Dvd\obj\x86\Debug\Dvd.csprojAssemblyReference.cache
